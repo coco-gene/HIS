@@ -54,6 +54,8 @@ select * from sms_staff;
 ```shell
 centos rabbitmq
 rabbitmq add host
+
+https://ext.dcloud.net.cn/plugin?name=compile-node-sass
 ```
 
 ```
