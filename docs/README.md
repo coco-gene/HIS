@@ -20,6 +20,11 @@ sudo rabbitmqctl set_permissions -p / his '.*' '.*' '.*'
 sudo rabbitmqctl add_vhost /his
 sudo rabbitmqctl set_permissions -p /his his '.*' '.*' '.*'
 
+sudo vim /etc/redis.conf
+requirepass 123456
+sudo systemctl restart redis
+Password123@redis
+
 java -jar HIS-api/target/HIS-api-1.0-SNAPSHOT.jar
 
 http://49.232.6.131:8073/
