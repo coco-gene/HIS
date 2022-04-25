@@ -27,6 +27,10 @@ grant all privileges on his.* to 'his'@'%';
 flush privileges;
 ```
 
+```shell
+centos rabbitmq
+```
+
 ```
 his-cloud-api-app/target/his-cloud-api-app-1.0.0-SNAPSHOT.jar          his-cloud-service-dms/target/his-cloud-service-dms-1.0.0-SNAPSHOT.jar
 his-cloud-api-pc/target/his-cloud-api-pc-1.0.0-SNAPSHOT.jar            his-cloud-service-pms/target/his-cloud-service-pms-1.0.0-SNAPSHOT.jar
