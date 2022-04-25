@@ -13,6 +13,7 @@ http://49.232.6.131:8073/
 
 cd HIS-web
 cnpm install
+cnpm install core-js@2
 npm run dev
 npm run build:prod
 
