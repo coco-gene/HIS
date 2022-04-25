@@ -39,10 +39,10 @@ jwt:
 
 aliyun:
   oss:
-    endpoint: 
-    accessKeyId: 
-    accessKeySecret:
-    bucketName: 
+    endpoint: oss-cn-beijing.aliyuncs.com
+    accessKeyId: LTAI6jw7P8XVANMr
+    accessKeySecret: CA377oINCgB7gppTQoKdFoIim8rIVF
+    bucketName: zain-images
     policy:
       expire: 300
     maxSize: 10
