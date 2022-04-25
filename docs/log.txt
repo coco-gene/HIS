@@ -42,3 +42,20 @@ To install them, you can run: npm install --save core-js/modules/es6.array.find-
 
 ./src/layout/components/TagsView/ScrollPane.vue?vue&type=script&lang=js& (./node_modules/_cache-loader@2.0.1@cache-loader/dist/cjs.js??ref--12-0!./node_modules/_babel-loader@8.2.5@babel-loader/lib!./node_modules/_cache-loader@2.0.1@cache-loader/dist/cjs.js??ref--0-0!./node_modules/_vue-loader@15.9.8@vue-loader/lib??vue-loader-options!./src/layout/components/TagsView/ScrollPane.vue?vue&type=script&lang=js&)
 Module not found: Error: Can't resolve 'core-js/modules/es6.array.find-index' in '~/dev/github/HIS/HIS-web/src/layout/components/TagsView'
+
+rabbitmqctl list_users
+Listing users ...
+guest   [administrator]
+...done.
+
+sudo rabbitmqctl add_user his his
+Creating user "his" ...
+...done.
+
+sudo rabbitmqctl add_vhost /his
+Creating vhost "/his" ...
+...done.
+
+sudo rabbitmqctl set_permissions -p /his his '.*' '.*' '.*'
+Setting permissions for user "his" in vhost "/his" ...
+...done.

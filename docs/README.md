@@ -6,6 +6,19 @@ mvn clean package
 
 sudo yum install rabbitmq-server
 sudo systemctl start rabbitmq-server
+sudo systemctl enable rabbitmq-server
+sudo systemctl status rabbitmq-server
+rabbitmq-plugins enable rabbitmq_management
+rabbitmqctl list_users
+user:guest
+pwd:guest
+#rabbitmqctl add_user 用户名 密码  
+sudo rabbitmqctl add_user his his
+
+sudo rabbitmqctl set_user_tags his administrator
+sudo rabbitmqctl set_permissions -p / his '.*' '.*' '.*'
+sudo rabbitmqctl add_vhost /his
+sudo rabbitmqctl set_permissions -p /his his '.*' '.*' '.*'
 
 java -jar HIS-api/target/HIS-api-1.0-SNAPSHOT.jar
 
@@ -29,6 +42,7 @@ flush privileges;
 
 ```shell
 centos rabbitmq
+rabbitmq add host
 ```
 
 ```
