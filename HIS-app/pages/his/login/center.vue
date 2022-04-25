@@ -41,7 +41,7 @@
 				<view class="li " >
 					<view class="icon"><image src="../../../static/user/help.png"></image></view>
 					<view class="text">帮助中心</view>
-					<image class="to" src="../../static/user/to.png"></image>
+					<image class="to" src="../../../static/user/to.png"></image>
 				</view>
 				<view class="li " >
 					<view class="icon"><image src="../../../static/user/about.png"></image></view>
@@ -51,7 +51,7 @@
 				<view class="li " >
 					<view class="icon"><image src="../../../static/user/opinion.png"></image></view>
 					<view class="text">意见反馈</view>
-					<image class="to" src="../../static/user/to.png"></image>
+					<image class="to" src="../../../static/user/to.png"></image>
 				</view>
 			</view>
 			<view class="list">
