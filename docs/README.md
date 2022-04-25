@@ -21,7 +21,9 @@ sudo rabbitmqctl add_vhost /his
 sudo rabbitmqctl set_permissions -p /his his '.*' '.*' '.*'
 
 sudo vim /etc/redis.conf
-requirepass 123456
+bind 0.0.0.0
+port 6381
+#requirepass 123456
 sudo systemctl restart redis
 Password123@redis
 
