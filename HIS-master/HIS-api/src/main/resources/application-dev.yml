@@ -17,9 +17,9 @@ spring:
     time-zone: GMT+8  #市区设置
 
   datasource:
-    url: jdbc:mysql://192.168.18.1:3306/his?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
-    username: root
-    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/his?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: his
+    password: his123456
     druid:
       initial-size: 5 #连接池初始化大小
       min-idle: 10 #最小空闲连接数
