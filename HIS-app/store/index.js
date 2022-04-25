@@ -6,7 +6,7 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
 	state: {
 		// url: 'localhost:9999',
-		url: '49.232.6.131:8073/app',
+		url: '49.232.6.131:8073',
 		hasLogin: false,
 		name: '',
 		patientId: '',
