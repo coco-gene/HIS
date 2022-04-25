@@ -12,7 +12,7 @@ spring:
 
 
 server:
-  port: 9999
+  port: 8073
 
 #mybatis:
 #  mapper-locations:classpath:com/neu/his/sms/com.neu.his.sms.mapper/*.xml,classpath:com/neu/his/mbg/mapper/*.xml
