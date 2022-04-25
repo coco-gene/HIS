@@ -45,6 +45,10 @@ grant all privileges on his.* to 'his'@'%';
 flush privileges;
 
 mysql -h127.0.0.1 -uroot -p his < document/mysql/his.sql
+
+mysql -h127.0.0.1 -uroot -p
+use his
+select * from sms_staff;
 ```
 
 ```shell
