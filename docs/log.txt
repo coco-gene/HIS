@@ -1,0 +1,7 @@
+HIS/HIS-master/HIS-common/src/main/java/com/neu/his/common/dto/dms/DmsCaseHistoryResult.java:[5,26] package javafx.scene.chart does not exist
+
+npm run dev
+
+This relative module was not found:
+
+* ./src/main.js in multi ./node_modules/_webpack-dev-server@3.11.3@webpack-dev-server/client?http://10.40.51.13:8080/sockjs-node (webpack)/hot/dev-server.js ./src/main.js
