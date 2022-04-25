@@ -25,7 +25,9 @@ bind 0.0.0.0
 port 6381
 #requirepass 123456
 sudo systemctl restart redis
+sudo systemctl stop redis
 Password123@redis
+file
 
 java -jar HIS-api/target/HIS-api-1.0-SNAPSHOT.jar
 
