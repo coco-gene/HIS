@@ -1,5 +1,5 @@
 <template>
-  <div class="login-container" id="loginbackground">
+  <div id="loginbackground" class="login-container">
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on" label-position="left">
 
       <div class="title-container">
@@ -46,7 +46,6 @@
       </el-tooltip>
 
       <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">登录</el-button>
-
 
     </el-form>
 
