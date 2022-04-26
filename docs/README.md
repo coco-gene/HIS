@@ -71,6 +71,9 @@ git checkout -b dromara-main main
 git pull git@github.com:dromara/MaxKey.git main
 
 sudo docker run -p 8091:8000 casbin/casdoor-all-in-one
+http://49.232.6.131:8091/
+admin
+123
 ```
 
 ```shell
@@ -82,6 +85,8 @@ https://ext.dcloud.net.cn/plugin?name=compile-node-sass
 spring ldap
 https://juejin.cn/post/6844903581410131981
 https://www.jianshu.com/p/3aeb49a9befd
+
+casbin
 ```
 
 ```
