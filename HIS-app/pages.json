@@ -588,7 +588,7 @@
 				{
 					"path": "nav-transparent/nav-transparent",
 					"style": {
-						"navigationBarTitleText": "东大云医院",
+						"navigationBarTitleText": "当归云医院",
 						"app-plus": {
 							"titleNView": {
 								"type": "transparent"
