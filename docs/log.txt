@@ -115,3 +115,6 @@ show tables;
 | sms_workload_record              |
 +----------------------------------+
 38 rows in set (0.00 sec)
+
+select id, username, password, status,
+create_time, gender, skd_flag, title, name, dept_id, role_id, registration_rank_id from sms_staff WHERE ( dept_id = ? and registration_rank_id = ? and status = ? )
