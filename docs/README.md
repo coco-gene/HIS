@@ -69,6 +69,8 @@ test
 
 git checkout -b dromara-main main
 git pull git@github.com:dromara/MaxKey.git main
+
+sudo docker run -p 8091:8000 casbin/casdoor-all-in-one
 ```
 
 ```shell
