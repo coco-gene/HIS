@@ -66,6 +66,9 @@ update sms_staff set registration_rank_id=2;
 
 演示用户
 test
+
+git checkout -b dromara-main main
+git pull git@github.com:dromara/MaxKey.git main
 ```
 
 ```shell
@@ -73,6 +76,10 @@ centos rabbitmq
 rabbitmq add host
 
 https://ext.dcloud.net.cn/plugin?name=compile-node-sass
+
+spring ldap
+https://juejin.cn/post/6844903581410131981
+https://www.jianshu.com/p/3aeb49a9befd
 ```
 
 ```
