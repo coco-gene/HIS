@@ -60,6 +60,12 @@ select id, username, password, status, create_time, gender, skd_flag, title, nam
 select * from sms_staff WHERE ( dept_id = 1 );
 select * from sms_staff WHERE ( dept_id = 1 and registration_rank_id = 2 and status = 1 );
 update sms_staff set registration_rank_id=2;
+
+120165199006291010
+2019060618171000
+
+演示用户
+test
 ```
 
 ```shell
