@@ -3,7 +3,7 @@
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" auto-complete="on" label-position="left">
 
       <div class="title-container">
-        <h3 class="title">东大云医院</h3>
+        <h3 class="title">当归云医院</h3>
       </div>
 
       <el-form-item prop="username">
@@ -34,7 +34,7 @@
             placeholder="密码"
             name="password"
             tabindex="2"
-            auto-complete="on"  
+            auto-complete="on"
             @keyup.native="checkCapslock"
             @blur="capsTooltip = false"
             @keyup.enter.native="handleLogin"
@@ -47,7 +47,7 @@
 
       <el-button :loading="loading" type="primary" style="width:100%;margin-bottom:30px;" @click.native.prevent="handleLogin">登录</el-button>
 
-      
+
     </el-form>
 
     <el-dialog title="Or connect with" :visible.sync="showDialog">
@@ -84,7 +84,7 @@ export default {
     }
     return {
       loginForm: {
-        username: '丁聪华',
+        username: '演示用户',
         password: 'test'
       },
       loginRules: {
@@ -200,8 +200,8 @@ export default {
 /* Detail see https://github.com/PanJiaChen/vue-element-admin/pull/927 */
 
 $bg:#283443;
-$light_gray:black;
-$cursor: black;
+$light_gray:#fff;
+$cursor: #fff;
 
 @supports (-webkit-mask: none) and (not (cater-color: $cursor)) {
   .login-container .el-input input {
@@ -222,9 +222,9 @@ $cursor: black;
       -webkit-appearance: none;
       border-radius: 0px;
       padding: 12px 5px 12px 15px;
-      color: $light_gray;
+      color: #fff;
       height: 47px;
-      caret-color: $cursor;
+      caret-color: #fff;
 
       &:-webkit-autofill {
         box-shadow: 0 0 0px 1000px  inset !important;
@@ -249,8 +249,9 @@ $light_gray:#eee;
 .login-container {
   min-height: 100%;
   width: 100%;
-  background: url("../../assets/images/login.jpg");
-  background-size: 100% 100%;
+  background-color: $bg;
+  /*background: url("../../assets/images/login.jpg");
+  background-size: 100% 100%;*/
   overflow: hidden;
 
   .login-form {

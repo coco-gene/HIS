@@ -36,7 +36,7 @@
         <el-tabs v-model="activeName" @tab-click="handleClick">
           <el-tab-pane label="日结单" name="first" style="text-align:center">
             <div id="table" v-if="rijiedan" style="width:1200px;text-align:center;padding-left:200px">
-              <span>东大云医院门诊收费日结单</span>
+              <span>当归云医院门诊收费日结单</span>
               <table cellpadding="5" border="1" style="border:#DEDEDE;padding:1px" cellspacing="0">
                 <tr>
                   <td style="width:200px">日结时间范围</td>
@@ -100,9 +100,9 @@
                 </tr>
                 <tr>
                   <td></td>
-                  <td>信用卡金额</td> 
+                  <td>信用卡金额</td>
                   <td>{{reportdetail.creditCardAmount}}</td>
-                  <td>其他金额</td> 
+                  <td>其他金额</td>
                   <td>{{reportdetail.otherAmount}}</td>
                   <td></td>
                   <td></td>
@@ -128,7 +128,7 @@
               <el-table-column label="发票号" prop="invoiceNo"></el-table-column>
               <el-table-column label="发票金额" prop="amount"></el-table-column>
               <el-table-column label="发票时间" prop="createTime"></el-table-column>
-              <el-table-column label="账单号" prop="billId"></el-table-column>  
+              <el-table-column label="账单号" prop="billId"></el-table-column>
               <el-table-column label="支付类型" prop="settlementCatName"></el-table-column>
               <el-table-column label="收费员id" prop="operatorId"></el-table-column>
             </el-table>
@@ -227,7 +227,7 @@ export default {
         this.rijiedan = true
         this.querySettleDetailById(res.data)
       })
-      
+
     }
   }
 }

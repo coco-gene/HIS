@@ -47,11 +47,11 @@
         </el-tabs>
       </el-aside>
       <el-main style="padding-top:0;">
-        
+
         <el-tabs v-model="activeName" @tab-click="handleClick">
           <el-tab-pane label="日结单" name="first" style="text-align:center">
             <div v-if="printtable" id="table" style="width:1000px;text-align:center;">
-              <span>东大云医院门诊收费日结单</span>
+              <span>当归云医院门诊收费日结单</span>
               <table cellpadding="5" border="1" style="border:#DEDEDE;padding:1px" cellspacing="0">
                 <tr>
                   <td style="width:200px">日结时间范围</td>
@@ -115,9 +115,9 @@
                 </tr>
                 <tr>
                   <td></td>
-                  <td>信用卡金额</td> 
+                  <td>信用卡金额</td>
                   <td>{{reportdetail.creditCardAmount}}</td>
-                  <td>其他金额</td> 
+                  <td>其他金额</td>
                   <td>{{reportdetail.otherAmount}}</td>
                   <td></td>
                   <td></td>
