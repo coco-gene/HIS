@@ -70,3 +70,48 @@ Setting permissions for user "his" in vhost "/his" ...
 17:03:44.759 Download tools success, please rerun.
 
 io.lettuce.core.RedisCommandExecutionException: NOAUTH Authentication required.
+
+show tables;
++----------------------------------+
+| Tables_in_his                    |
++----------------------------------+
+| bms_bills_record                 |
+| bms_invoice_exp                  |
+| bms_invoice_record               |
+| bms_operator_settle_record       |
+| bms_settlement_cat               |
+| dms_case_history                 |
+| dms_case_model                   |
+| dms_case_model_catalog           |
+| dms_dise                         |
+| dms_dise_catalog                 |
+| dms_dosage                       |
+| dms_drug                         |
+| dms_drug_model                   |
+| dms_drug_refund_item_record      |
+| dms_herbal_item_record           |
+| dms_herbal_model_item            |
+| dms_herbal_prescription_record   |
+| dms_medicine_item_record         |
+| dms_medicine_model_item          |
+| dms_medicine_prescription_record |
+| dms_non_drug                     |
+| dms_non_drug_item_record         |
+| dms_non_drug_model               |
+| dms_registration                 |
+| pms_patient                      |
+| sms_dept                         |
+| sms_description                  |
+| sms_frequent_used                |
+| sms_login_log                    |
+| sms_permission                   |
+| sms_registration_rank            |
+| sms_role                         |
+| sms_role_permission_relation     |
+| sms_skd                          |
+| sms_skd_rule                     |
+| sms_skd_rule_item                |
+| sms_staff                        |
+| sms_workload_record              |
++----------------------------------+
+38 rows in set (0.00 sec)
