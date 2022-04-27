@@ -78,7 +78,7 @@
 			},
 			async searchSkd() {
 				var [error, res] = await uni.request({
-					url: 'http://' + this.url + '/appRegistration/listDoctorSkd?staffId=' + this.staffId,
+					url: this.url + '/appRegistration/listDoctorSkd?staffId=' + this.staffId,
 					method: 'POST'
 				});
 				if(error != null && error.errMsg=="request:fail"){
@@ -147,7 +147,7 @@
 				}
 				console.log(this.patientId)
 				var res = await uni.request({
-					url: 'http://' + this.url + '/appRegistration/appReg',
+					url: this.url + '/appRegistration/appReg',
 					data:{
 						skdId:this.items[this.currentSkd].id,
 						deptId:this.deptId,

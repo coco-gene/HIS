@@ -56,7 +56,7 @@
 				var data  = {}
 				data.name = this.searchinput
 				var [error, res] = await uni.request({
-					url: 'http://' + this.url + '/dept/select?pageSize=1000&pageNum=1',
+					url: this.url + '/dept/select?pageSize=1000&pageNum=1',
 					data:data,
 					method:'post'
 				});
@@ -93,7 +93,7 @@
 			},
 			async categoryClickMain(categroy, index) {
 				var [error, res] = await uni.request({
-					url: 'http://' + this.url + '/appRegistration/listDeptDoctor?deptId=' + categroy.ID,
+					url: this.url + '/appRegistration/listDeptDoctor?deptId=' + categroy.ID,
 					method: 'POST',
 				});
 				console.log(res.data)
@@ -112,7 +112,7 @@
 			},
 			async getCategory() {
 				var [error, res] = await uni.request({
-					url: 'http://' + this.url + '/appRegistration/listAllDept',
+					url: this.url + '/appRegistration/listAllDept',
 					method: 'GET'
 				});
 				if(error != null && error.errMsg=="request:fail"){

@@ -118,7 +118,7 @@
 			},
 			async getResult(value) {
 				var [error, res] = await uni.request({
-					url: 'http://' + this.url + '/appRegHistory/getResult?id=' + value.id,
+					url: this.url + '/appRegHistory/getResult?id=' + value.id,
 					method: 'POST'
 				});
 				if(error != null && error.errMsg=="request:fail"){
@@ -144,7 +144,7 @@
 			},
 			async getItme(value) {
 				var [error, res] = await uni.request({
-					url: 'http://' + this.url + '/appRegHistory/listDetail?prescriptionId=' + value.id + '&type=' + value.typeNum,
+					url: this.url + '/appRegHistory/listDetail?prescriptionId=' + value.id + '&type=' + value.typeNum,
 					method: 'POST'
 				});
 				if(error != null && error.errMsg=="request:fail"){
@@ -179,7 +179,7 @@
 			},
 			async getDetail() {
 				var [error, res] = await uni.request({
-					url: 'http://' + this.url + '/appRegHistory/listFee?registrationId=' + this.registrationId,
+					url: this.url + '/appRegHistory/listFee?registrationId=' + this.registrationId,
 					method: 'POST'
 				});
 				if(error != null && error.errMsg=="request:fail"){

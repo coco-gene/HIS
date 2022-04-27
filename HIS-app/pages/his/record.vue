@@ -41,7 +41,7 @@
 		methods: {
 			async getRecord() {
 				var [error, res] = await uni.request({
-					url: 'http://' + this.url + '/appRegHistory/listAllRegistration?identificationNo=' + this.idCard,
+					url: this.url + '/appRegHistory/listAllRegistration?identificationNo=' + this.idCard,
 					method: 'POST'
 				});
 				if(error != null && error.errMsg=="request:fail"){

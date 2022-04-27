@@ -44,7 +44,7 @@
 		methods: {
 			async getDept() {
 				var [error, res] = await uni.request({
-					url: 'http://' + this.url + '/appRegHistory/getDeptDescription',
+					url: this.url + '/appRegHistory/getDeptDescription',
 					method: 'POST'
 				});
 				if(error != null && error.errMsg=="request:fail"){

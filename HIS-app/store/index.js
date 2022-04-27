@@ -5,8 +5,8 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
 	state: {
-		// url: 'localhost:9999',
-		url: '49.232.6.131:8073',
+		// url: 'http://localhost:9999',
+		url: 'https://his.7otech.com/prod-api',
 		hasLogin: false,
 		name: '',
 		patientId: '',
