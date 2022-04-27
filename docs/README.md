@@ -90,6 +90,8 @@ casbin
 
 casdoor
 https://www.cnblogs.com/casbin/p/16136664.html
+https://github.com/casdoor/casdoor-java-sdk
+https://github.com/casdoor/casdoor-spring-boot-starter
 ```
 
 ```
