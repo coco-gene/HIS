@@ -100,6 +100,7 @@ casdoor
 https://www.cnblogs.com/casbin/p/16136664.html
 https://github.com/casdoor/casdoor-java-sdk
 https://github.com/casdoor/casdoor-spring-boot-starter
+https://www.bookstack.cn/read/casdoor-1.12-zh/d26ecc986ea325dd.md
 ```
 
 ```
