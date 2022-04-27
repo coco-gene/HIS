@@ -68,7 +68,7 @@
 					return;
 				}
 				var res = await uni.request({
-					url: 'http://' + this.webUrl + '/appRegistration/login?identificationNo=' + this.id + '&medicalRecordNo=' + this.reg,
+					url: this.webUrl + '/appRegistration/login?identificationNo=' + this.id + '&medicalRecordNo=' + this.reg,
 					method:'post',
 					success: (res) => {
 						console.log(res.data);
