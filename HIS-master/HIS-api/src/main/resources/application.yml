@@ -31,6 +31,14 @@ server:
 #mybatis:
 #  mapper-locations:classpath:com/neu/his/sms/com.neu.his.sms.mapper/*.xml,classpath:com/neu/his/mbg/mapper/*.xml
 
+casdoor:
+  endpoint: http://172.21.16.11:8091
+  client-id: 28a3f58f3cb8b0417e2b
+  client-secret: 60397c3a80e5529d3fa0b3fd1948ce062ae212f8
+  jwt-public-key: <jwt-public-key>
+  organization-name: built-in
+  application-name: application_his
+
 jwt:
   tokenHeader: Authorization #JWT存储的请求头
   secret: mySecret #JWT加解密使用的密钥
