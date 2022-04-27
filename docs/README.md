@@ -30,6 +30,7 @@ Password123@redis
 file
 
 java -jar HIS-api/target/HIS-api-1.0-SNAPSHOT.jar
+nohup java -jar HIS-api/target/HIS-api-1.0-SNAPSHOT.jar &
 
 http://49.232.6.131:8073/
 
@@ -61,11 +62,12 @@ select * from sms_staff WHERE ( dept_id = 1 );
 select * from sms_staff WHERE ( dept_id = 1 and registration_rank_id = 2 and status = 1 );
 update sms_staff set registration_rank_id=2;
 
-120165199006291010
-2019060618171000
-
+https://his.7otech.com/
 演示用户
 test
+
+120165199006291010
+2019060618171000
 
 git checkout -b dromara-main main
 git pull git@github.com:dromara/MaxKey.git main
