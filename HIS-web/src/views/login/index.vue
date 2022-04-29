@@ -111,6 +111,7 @@ export default {
     }
   },
   created() {
+    console.log(this.getSigninUrl())
     // window.addEventListener('storage', this.afterQRScan)
   },
   mounted() {

@@ -7,7 +7,15 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  methods: {
+    login() {
+      window.location.href = this.getSigninUrl()
+    },
+    signup() {
+      window.location.href = this.getSignupUrl()
+    }
+  }
 }
 </script>
 <style>
@@ -15,7 +23,7 @@ export default {
 body .el-table th.gutter{
       display: table-cell!important;
   }
-  
+
   body .el-table colgroup.gutter{
       display: table-cell!important;
   }
