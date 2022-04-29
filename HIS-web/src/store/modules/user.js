@@ -5,14 +5,13 @@ import router, { resetRouter } from '@/router'
 const state = {
   token: getToken(),
   name: '',
-  id:'',
-  name:'',
+  id: '',
   avatar: '',
   introduction: '',
   roles: [],
-  deptId:'',
-  roleId:'',
-  registrationRankId:''
+  deptId: '',
+  roleId: '',
+  registrationRankId: ''
 }
 
 const mutations = {
@@ -40,7 +39,7 @@ const mutations = {
   SET_ROLEID: (state, roleId) => {
     state.roleId = roleId
   },
-  SET_REGISTRATIONRANKID:(state,registrationRankId) =>{
+  SET_REGISTRATIONRANKID: (state, registrationRankId) => {
     state.registrationRankId = registrationRankId
   }
 }
@@ -52,8 +51,23 @@ const actions = {
     return new Promise((resolve, reject) => {
       login({ username: username.trim(), password: password }).then(response => {
         const { data } = response
-        commit('SET_TOKEN', data.tokenHead+data.token)
-        setToken(data.tokenHead+data.token)
+        commit('SET_TOKEN', data.tokenHead + data.token)
+        setToken(data.tokenHead + data.token)
+        resolve()
+      }).catch(error => {
+        reject(error)
+      })
+    })
+  },
+
+  // sso登录
+  ssologin({ commit }, userInfo) {
+    const { username, password } = userInfo
+    return new Promise((resolve, reject) => {
+      login({ username: username.trim(), password: password }).then(response => {
+        const { data } = response
+        commit('SET_TOKEN', data.tokenHead + data.token)
+        setToken(data.tokenHead + data.token)
         resolve()
       }).catch(error => {
         reject(error)
@@ -62,19 +76,19 @@ const actions = {
   },
 
   // 获取用户信息
-  getInfo({ commit}) {
+  getInfo({ commit }) {
     return new Promise((resolve, reject) => {
       getInfo().then(response => {
         const { data } = response
         if (!data) {
           reject('验证失败，请重新登录！')
         }
-        const { deptId,id,name,roleId} = data
+        const { deptId, id, name, roleId } = data
         commit('SET_DEPTID', deptId)
         commit('SET_ID', id)
         commit('SET_NAME', name)
         commit('SET_ROLEID', 1)
-        commit('SET_ROLES',[roleId])
+        commit('SET_ROLES', [roleId])
         data.roles = [roleId]
         resolve(data)
       }).catch(error => {

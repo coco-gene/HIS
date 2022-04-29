@@ -7,6 +7,13 @@ export function login(data) {
   })
 }
 
+export function ssologin(data) {
+  return request({
+    url: '/sso/login',
+    method: 'get'
+  })
+}
+
 export function create(data) {
   return request({
     url: '/staff/create',
@@ -17,7 +24,7 @@ export function create(data) {
 
 export function update(data) {
   return request({
-    url: '/staff/update/'+data.id,
+    url: '/staff/update/' + data.id,
     method: 'post',
     data
   })
@@ -34,28 +41,26 @@ export function logout() {
   return Promise.resolve()
 }
 
-export function select(data){
+export function select(data) {
   return request({
     url: 'staff/select',
     data,
-    params:{
-      pageSize:data.pageSize,
-      pageNum:data.pageNum
+    params: {
+      pageSize: data.pageSize,
+      pageNum: data.pageNum
     },
-    method: 'post',
+    method: 'post'
   })
 }
 
-export function getUserList(data){
+export function getUserList(data) {
   return request({
     url: 'staff/select',
     data,
-    params:{
-      pageSize:100000,
-      pageNum:1
+    params: {
+      pageSize: 100000,
+      pageNum: 1
     },
-    method: 'post',
+    method: 'post'
   })
 }
-
-
