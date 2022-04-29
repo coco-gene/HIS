@@ -49,8 +49,8 @@
 
     </el-form>
 
-    <el-dialog title="Or connect with" :visible.sync="showDialog">
-      Can not be simulated on local, so please combine you own business simulation! ! !
+    <el-dialog title="统一登录" :visible.sync="showDialog">
+      统一登录
       <br>
       <br>
       <br>
@@ -93,7 +93,7 @@ export default {
       passwordType: 'password',
       capsTooltip: false,
       loading: false,
-      showDialog: false,
+      showDialog: true,
       redirect: undefined,
       otherQuery: {}
     }
