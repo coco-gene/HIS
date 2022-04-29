@@ -1,5 +1,9 @@
 <template>
   <div class="social-signup-container">
+    <div class="sign-btn" @click="pelicanHandleClick('pelican')">
+      <span class="wx-svg-container"><svg-icon icon-class="wechat" class="icon" /></span>
+      Pelican
+    </div>
     <div class="sign-btn" @click="wechatHandleClick('wechat')">
       <span class="wx-svg-container"><svg-icon icon-class="wechat" class="icon" /></span>
       WeChat
@@ -12,11 +16,17 @@
 </template>
 
 <script>
-// import openWindow from '@/utils/open-window'
+import openWindow from '@/utils/open-window'
 
 export default {
   name: 'SocialSignin',
   methods: {
+    pelicanHandleClick(thirdpart) {
+      alert('ok')
+      this.$store.commit('SET_AUTH_TYPE', thirdpart)
+      const url = this.getSigninUrl()
+      openWindow(url, thirdpart, 540, 540)
+    },
     wechatHandleClick(thirdpart) {
       alert('ok')
       // this.$store.commit('SET_AUTH_TYPE', thirdpart)

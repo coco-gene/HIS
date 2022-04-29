@@ -51,6 +51,11 @@ export const constantRoutes = [
     hidden: true
   },
   {
+    path: '/callback',
+    component: () => import('@/views/login/callback'),
+    hidden: true
+  },
+  {
     path: '/auth-redirect',
     component: () => import('@/views/login/auth-redirect'),
     hidden: true
@@ -65,7 +70,7 @@ export const constantRoutes = [
     component: () => import('@/views/error-page/401'),
     hidden: true
   },
-  
+
   {
     path: '/',
     component: Layout,
@@ -78,18 +83,10 @@ export const constantRoutes = [
         meta: { title: '首页', icon: 'dashboard', affix: true }
       }
     ]
-  },
-  
-  
-  
-  
- 
-  
-  /** when your routing map is too long, you can split it into small modules **/
-  
+  }
 
-  
-  
+  /** when your routing map is too long, you can split it into small modules **/
+
   // 404 page must be placed at the end !!!
 
 ]
@@ -103,7 +100,7 @@ export const asyncRoutes = [
     meta: {
       title: '医生排班管理',
       icon: 'people',
-      roles:[1,7]
+      roles: [1, 7]
     },
     children: [
       {
@@ -121,7 +118,7 @@ export const asyncRoutes = [
     meta: {
       title: '药房工作台',
       icon: 'tree-table',
-      roles:[4,7]
+      roles: [4, 7]
     },
     children: [
       {
@@ -131,8 +128,8 @@ export const asyncRoutes = [
         meta: {
           title: '成药药房工作台',
           noCache: true,
-          roles:[4,7]
-        },
+          roles: [4, 7]
+        }
       },
       {
         path: 'herbal',
@@ -141,9 +138,9 @@ export const asyncRoutes = [
         meta: {
           title: '草药药房工作台',
           noCache: true,
-          roles:[4,7]
-        },
-      },
+          roles: [4, 7]
+        }
+      }
     ]
   },
   {
@@ -159,7 +156,7 @@ export const asyncRoutes = [
           title: '门诊医技工作台',
           icon: 'skill',
           noCache: true,
-          roles:[3,7]
+          roles: [3, 7]
         }
       }
     ]
@@ -168,7 +165,7 @@ export const asyncRoutes = [
     path: '/outpatient',
     component: Layout,
     redirect: '/outpatient/index',
-    roles:[2],
+    roles: [2],
     children: [
       {
         path: 'index',
@@ -179,8 +176,8 @@ export const asyncRoutes = [
           icon: 'peoples',
           noCache: true,
           hidden: true,
-          roles:[2,7]
-        },
+          roles: [2, 7]
+        }
       }
     ]
   },
@@ -192,26 +189,26 @@ export const asyncRoutes = [
     meta: {
       title: '模板&常用项',
       icon: 'nested',
-      roles:[2,7]
+      roles: [2, 7]
     },
     children: [
       {
         path: '/maintain/mould',
         component: () => import('@/views/outpatient/maintain/mould'),
         name: 'mould',
-        meta: { title: '病历模板管理',noCache: true }
+        meta: { title: '病历模板管理', noCache: true }
       },
       {
         path: '/maintain/inspection',
         component: () => import('@/views/outpatient/maintain/inspection'),
         name: 'inspection',
-        meta: { title: '非药品模板管理',noCache: true }
+        meta: { title: '非药品模板管理', noCache: true }
       },
       {
         path: '/maintain/drugModel',
         component: () => import('@/views/outpatient/maintain/drugModel'),
         name: 'drugModel',
-        meta: { title: '成药药品模板管理', noCache: true },
+        meta: { title: '成药药品模板管理', noCache: true }
       },
       {
         path: '/maintain/herDrugModel',
@@ -224,7 +221,7 @@ export const asyncRoutes = [
         component: () => import('@/views/outpatient/maintain/frequse'),
         name: 'frequse',
         meta: { title: '常用项管理', noCache: true }
-      },
+      }
     ]
   },
   {
@@ -235,7 +232,7 @@ export const asyncRoutes = [
     meta: {
       title: '门诊收费挂号',
       icon: 'money',
-      roles: [5,7]
+      roles: [5, 7]
     },
     children: [
       {
@@ -245,9 +242,9 @@ export const asyncRoutes = [
         meta: {
           title: '门诊挂号收费',
           noCache: true,
-          roles: [5,7]
-        },
-      },
+          roles: [5, 7]
+        }
+      }
     ]
   },
   {
@@ -263,8 +260,8 @@ export const asyncRoutes = [
           title: '排班表',
           icon: 'table',
           noCache: true
-        },
-      },
+        }
+      }
     ]
   },
   {
@@ -275,7 +272,7 @@ export const asyncRoutes = [
     meta: {
       title: '门诊日结',
       icon: 'documentation',
-      roles: [5,7]
+      roles: [5, 7]
     },
     children: [
       {
@@ -285,8 +282,8 @@ export const asyncRoutes = [
         meta: {
           title: '门诊日结',
           noCache: true,
-          roles: [5,7]
-        },
+          roles: [5, 7]
+        }
       },
       {
         path: 'dayReportHis',
@@ -295,9 +292,9 @@ export const asyncRoutes = [
         meta: {
           title: '历史日结',
           noCache: true,
-          roles: [5,7]
-        },
-      },
+          roles: [5, 7]
+        }
+      }
     ]
   },
   {
@@ -309,7 +306,7 @@ export const asyncRoutes = [
     meta: {
       title: '用户管理',
       icon: 'lock',
-      roles: [1,7] // you can set roles in root nav
+      roles: [1, 7] // you can set roles in root nav
     },
     children: [
       {
@@ -317,13 +314,13 @@ export const asyncRoutes = [
         component: () => import('@/views/permission/role'),
         name: 'RolePermission',
         meta: {
-          title: '角色权限管理',
+          title: '角色权限管理'
         }
       }
     ]
   },
   adminRouter,
-  
+
   {
     path: '/finance',
     component: Layout,
@@ -341,8 +338,8 @@ export const asyncRoutes = [
         meta: {
           title: '门诊日结核对',
           noCache: true,
-          roles:[1,6,7]
-        },
+          roles: [1, 6, 7]
+        }
       },
       {
         path: 'deptWorkload',
@@ -350,8 +347,8 @@ export const asyncRoutes = [
         name: 'deptWorkload',
         meta: {
           title: '科室工作量统计',
-          noCache: true,
-        },
+          noCache: true
+        }
       },
       {
         path: 'perWorkload',
@@ -359,9 +356,9 @@ export const asyncRoutes = [
         name: 'perWorkload',
         meta: {
           title: '个人工作量统计',
-          noCache: true,
-        },
-      },
+          noCache: true
+        }
+      }
     ]
   },
   {
@@ -381,8 +378,8 @@ export const asyncRoutes = [
         meta: {
           title: 'monitor',
           noCache: true,
-          roles:[1,7]
-        },
+          roles: [1, 7]
+        }
       },
       {
         path: 'zipkin',
@@ -391,8 +388,8 @@ export const asyncRoutes = [
         meta: {
           title: 'zipkin',
           noCache: true,
-          roles:[1,7]
-        },
+          roles: [1, 7]
+        }
       },
       {
         path: 'swagger',
@@ -401,8 +398,8 @@ export const asyncRoutes = [
         meta: {
           title: 'swagger',
           noCache: true,
-          roles:[1,7]
-        },
+          roles: [1, 7]
+        }
       },
       {
         path: 'hystrix',
@@ -411,8 +408,8 @@ export const asyncRoutes = [
         meta: {
           title: 'hystrix',
           noCache: true,
-          roles:[1,7]
-        },
+          roles: [1, 7]
+        }
       },
       {
         path: 'kibana',
@@ -421,9 +418,9 @@ export const asyncRoutes = [
         meta: {
           title: 'kibana',
           noCache: true,
-          roles:[1,7]
-        },
-      },
+          roles: [1, 7]
+        }
+      }
     ]
   },
   { path: '*', redirect: '/404', hidden: true }
