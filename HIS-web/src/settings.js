@@ -1,5 +1,5 @@
 module.exports = {
-  title: '东软云医院',
+  title: '当归云医院',
 
   /**
    * @type {boolean} true | false
