@@ -73,6 +73,11 @@ public class SsoLoginController {
              * hash=, preHash=, github=, google=, qq=, wechat=, facebook=, dingtalk=,
              * weibo=, gitee=, linkedin=, wecom=, lark=, gitlab=, ldap=, properties={})
              */
+            String name = user.getName();
+            String displayName = user.getDisplayName();
+            String avatar = user.getAvatar();
+            String email = user.getEmail();
+            String phone = user.getPhone();
             // create user
             // update user
         } catch (CasdoorAuthException e) {
