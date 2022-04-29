@@ -83,7 +83,7 @@ public class DmsHerbalPrescriptionRecordServiceImpl implements DmsHerbalPrescrip
 
     /**
      * 描述:1.调用DmsDrugDao根据ids修改status为0（无效）
-     * <p>author: ma
+     * <p>author: Peter
      * <p>20190614 赵煜 modify:DmsHerbalItemRecord->DmsHerbalItemRecordResult
      */
     @Override

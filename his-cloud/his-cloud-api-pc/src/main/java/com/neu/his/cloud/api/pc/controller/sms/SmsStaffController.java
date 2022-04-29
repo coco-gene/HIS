@@ -53,7 +53,7 @@ public class SmsStaffController {
 
     /**
      * 描述:更新一个用户的全部信息
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("更新用户信息")
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)

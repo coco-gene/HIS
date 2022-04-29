@@ -69,7 +69,7 @@ public class DmsDrugServiceImpl implements DmsDrugService {
 
     /**
      * 描述:更新
-     * <p>author: ma
+     * <p>author: Peter
      * <p>author: 赵煜 修改更新逻辑，更新操作与code无关，code可以重复
      */
     @Override
@@ -150,7 +150,7 @@ public class DmsDrugServiceImpl implements DmsDrugService {
 
     /**
      * 描述:1.调用DmsDrugDao查询所有记录（不包括status=0）
-     * <p>author: ma
+     * <p>author: Peter
      * <p>author: 赵煜 修改越界错误
      */
     @Override

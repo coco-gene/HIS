@@ -95,7 +95,7 @@ public class SmsSkdServiceImpl implements SmsSkdService {
 
     /**
      * 描述:1.调用SmsSkdRuleDao根据deptId查找数据（不包括规则项）
-     * <p>author: ma
+     * <p>author: Peter
      * <p>author: 赵煜 修改查询不到科室排班规则500错误，封装操作员姓名
      */
     @Override

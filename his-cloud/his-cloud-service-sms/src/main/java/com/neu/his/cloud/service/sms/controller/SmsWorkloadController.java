@@ -25,7 +25,7 @@ public class SmsWorkloadController {
 
     /**
      * 描述：根据时间段查询某个人工作量
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("根据时间段查询某个人工作量")
     @RequestMapping(value = "/queryPersonal", method = RequestMethod.POST)
@@ -38,7 +38,7 @@ public class SmsWorkloadController {
 
     /**
      * 描述：根据时间段统计某个科室工作量
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("根据时间段统计某个科室工作量")
     @RequestMapping(value = "/queryDept", method = RequestMethod.POST)
@@ -51,7 +51,7 @@ public class SmsWorkloadController {
 
     /**
      * 描述:根据时间段统计所有科室工作量
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("根据时间段统计所有科室工作量")
     @RequestMapping(value = "/queryDeptWorkloadList", method = RequestMethod.POST)
@@ -63,7 +63,7 @@ public class SmsWorkloadController {
 
     /**
      * 描述：根据时间段统计科室所有人工作量(一个科室所有人)
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("根据时间段统计科室所有人工作量(一个科室所有人)")
     @RequestMapping(value = "/queryDeptPersonalWorkloadList", method = RequestMethod.POST)

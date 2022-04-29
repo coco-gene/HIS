@@ -63,7 +63,7 @@ public class SmsStaffController {
 
     /**
      * 描述:根据ids删除用户
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("根据ids删除用户")
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
@@ -78,7 +78,7 @@ public class SmsStaffController {
 
     /**
      * 描述:更新一个用户的全部信息
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("更新一个用户的全部信息")
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
@@ -93,7 +93,7 @@ public class SmsStaffController {
 
     /**
      * 描述:模糊查询用户、且分页
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("模糊查询用户、且分页")
     @RequestMapping(value = "/select", method = RequestMethod.POST)
@@ -109,7 +109,7 @@ public class SmsStaffController {
 
     /**
      * 描述:查询所有用户
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("查询所有用户")
     @RequestMapping(value = "/selectAll", method = RequestMethod.GET)

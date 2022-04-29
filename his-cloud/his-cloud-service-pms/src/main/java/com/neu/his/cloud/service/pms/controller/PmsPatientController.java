@@ -19,7 +19,7 @@ public class PmsPatientController {
     private PmsPatientService pmsPatientService;
     /**
      * 描述:患者手机端登录
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("患者 手机端登录")
     @RequestMapping(value = "/login", method = RequestMethod.POST)

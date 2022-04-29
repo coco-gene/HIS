@@ -25,7 +25,7 @@ public class BmsFeeQueryController {
 
     /**
      * 描述:根据挂号id查询患者费用
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("根据挂号id查询患者费用")
     @RequestMapping(value = "/listByRegistration", method = RequestMethod.POST)
@@ -37,7 +37,7 @@ public class BmsFeeQueryController {
 
     /**
      * 描述:查看某次挂号费用大项
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("查询某次挂号费用（大项）")
     @RequestMapping(value = "/listFee", method = RequestMethod.POST)
@@ -49,7 +49,7 @@ public class BmsFeeQueryController {
 
     /**
      * 描述:查看某次挂号费用小项
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("查询某次挂号费用（小项）")
     @RequestMapping(value = "/listDetail", method = RequestMethod.POST)

@@ -46,7 +46,7 @@ public class AppRegistrationController {
     private SmsDescriptionService smsDescriptionService;
     /**
      * 描述:患者手机端登录
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("患者 手机端登录")
     @RequestMapping(value = "/login", method = RequestMethod.POST)
@@ -63,7 +63,7 @@ public class AppRegistrationController {
 
     /**
      * 描述:查询所有科室
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("查询所有科室")
     @RequestMapping(value = "/listAllDept", method = RequestMethod.GET)
@@ -75,7 +75,7 @@ public class AppRegistrationController {
 
     /**
      * 描述:查询对应科室所有专家
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("查询某个科室所有专家")
     @RequestMapping(value = "/listDeptDoctor", method = RequestMethod.POST)
@@ -87,7 +87,7 @@ public class AppRegistrationController {
 
     /**
      * 描述:查询对应专家所有排班及描述信息
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("查询某个专家所有排班及描述信息")
     @RequestMapping(value = "/listDoctorSkd", method = RequestMethod.POST)
@@ -126,7 +126,7 @@ public class AppRegistrationController {
 
     /**
      * 描述:手机端挂号
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("挂号")
     @RequestMapping(value = "/appReg", method = RequestMethod.POST)

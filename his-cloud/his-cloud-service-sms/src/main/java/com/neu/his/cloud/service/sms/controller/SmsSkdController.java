@@ -32,7 +32,7 @@ public class SmsSkdController {
 
     /**
      * 描述:创建排班规则
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("新增排班规则")
     @RequestMapping(value = "/createRule", method = RequestMethod.POST)
@@ -47,7 +47,7 @@ public class SmsSkdController {
 
     /**
      * 描述:删除排班规则
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("删除排班规则")
     @RequestMapping(value = "/deleteRule", method = RequestMethod.POST)
@@ -75,7 +75,7 @@ public class SmsSkdController {
 
     /**
      * 描述:根据部门id筛选排版规则基本信息、分页
-     * <p>author: ma
+     * <p>author: Peter
      * <p>author: 赵煜  修改查询不到科室排班规则500错误,并返回创建人name
      */
     @ApiOperation("根据部门id筛选排版规则基本信息、分页")
@@ -95,7 +95,7 @@ public class SmsSkdController {
 
     /**
      * 描述:根据规则id查询一条规则详情
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("根据规则id查询一条规则详情")
     @RequestMapping(value = "/getRuleDetail", method = RequestMethod.POST)
@@ -107,7 +107,7 @@ public class SmsSkdController {
 
     /**
      * 描述:根据多条排班规则生成skd
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("根据多条排班规则生成skd")
     @RequestMapping(value = "/generateSkd", method = RequestMethod.POST)
@@ -122,7 +122,7 @@ public class SmsSkdController {
 
     /**
      * 描述:查找排班记录、分页
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("查找排班记录、分页")
     @RequestMapping(value = "/listSkd", method = RequestMethod.POST)

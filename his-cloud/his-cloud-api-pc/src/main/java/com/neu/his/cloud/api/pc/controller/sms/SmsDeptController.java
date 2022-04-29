@@ -40,7 +40,7 @@ public class SmsDeptController {
 
     /**
      * 描述:更新一个科室的全部信息
-     * <p>author: ma
+     * <p>author: Peter
      */
     @ApiOperation("更新科室信息")
     @RequestMapping(value = "/update/{id}", method = RequestMethod.POST)
