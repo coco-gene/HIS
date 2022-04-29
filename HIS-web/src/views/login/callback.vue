@@ -14,7 +14,8 @@ export default {
     }
     console.log(data)
     if (window.localStorage) {
-      window.localStorage.setItem('x-admin-oauth-code', data)
+      window.localStorage.setItem('x-admin-oauth-code', JSON.stringify(data))
+      console.log(window.localStorage.getItem('x-admin-oauth-code'))
       // window.close()
     }
   },

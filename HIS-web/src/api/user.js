@@ -7,10 +7,11 @@ export function login(data) {
   })
 }
 
-export function ssologin(data) {
+export function ssologin(query) {
   return request({
     url: '/sso/login',
-    method: 'get'
+    method: 'get',
+    params: query
   })
 }
 

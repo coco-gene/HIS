@@ -173,16 +173,18 @@ export default {
       }, {})
     },
     afterQRScan(e) {
+      console.log(e)
       if (e.key === 'x-admin-oauth-code') {
-        const code = ''
+        const code = JSON.parse(window.localStorage.getItem('x-admin-oauth-code'))
         const codeMap = {
           wechat: 'code',
-          tencent: 'code'
+          tencent: 'code',
+          pelican: 'code'
         }
-        const type = codeMap[this.auth_type]
+        const type = codeMap['pelican']
         const codeName = code[type]
         if (codeName) {
-          this.$store.dispatch('user/ssologin', codeName).then(() => {
+          this.$store.dispatch('user/ssologin', code).then(() => {
             this.$router.push({ path: this.redirect || '/' })
           })
         } else {
