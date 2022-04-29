@@ -51,7 +51,7 @@ const config = {
   organizationName: 'built-in',
   appName: 'application_his',
   // redirectPath: 'https://his.7otech.com/prod-api/callback'
-  redirectPath: '#/callback'
+  redirectPath: '/#/callback'
 }
 Vue.use(VueCompositionAPI)
 Vue.use(Casdoor, config)

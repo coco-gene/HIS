@@ -89,6 +89,7 @@ admin
 123
 
 https://his.7otech.com/prod-api/callback
+https://his.7otech.com/#/callback
 ```
 
 ```shell

@@ -22,13 +22,11 @@ export default {
   name: 'SocialSignin',
   methods: {
     pelicanHandleClick(thirdpart) {
-      alert('ok')
       this.$store.commit('SET_AUTH_TYPE', thirdpart)
       const url = this.getSigninUrl()
       openWindow(url, thirdpart, 540, 540)
     },
     wechatHandleClick(thirdpart) {
-      alert('ok')
       // this.$store.commit('SET_AUTH_TYPE', thirdpart)
       // const appid = 'xxxxx'
       // const redirect_uri = encodeURIComponent('xxx/redirect?redirect=' + window.location.origin + '/auth-redirect')
@@ -36,7 +34,6 @@ export default {
       // openWindow(url, thirdpart, 540, 540)
     },
     tencentHandleClick(thirdpart) {
-      alert('ok')
       // this.$store.commit('SET_AUTH_TYPE', thirdpart)
       // const client_id = 'xxxxx'
       // const redirect_uri = encodeURIComponent('xxx/redirect?redirect=' + window.location.origin + '/auth-redirect')
