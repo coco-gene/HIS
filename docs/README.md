@@ -45,6 +45,7 @@ https://pelican.7otech.com/login/oauth/authorize?client_id=a07d0ddd8eaee128d94c&
 http://localhost:1024/#/callback?code=cb82a3b6978fdb318207&state=application_his
 https://pelican.7otech.com/login/oauth/authorize?client_id=a07d0ddd8eaee128d94c&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A1024%2F%23%2Fcallback&scope=read&state=application_his
 https://his.7otech.com/callback?code=cb82a3b6978fdb318207&state=application_his
+https://pelican.7otech.com/login/oauth/authorize?client_id=a07d0ddd8eaee128d94c&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A1024https%3A%2F%2Fhis.7otech.com%2Fcallback&scope=read&state=application_his
 
 mysql -h127.0.0.1 -uroot -p
 create database his default character set utf8mb4 collate utf8mb4_unicode_ci;

@@ -60,6 +60,19 @@ public class SsoLoginController {
             token = casdoorAuthService.getOAuthToken(code, state);
             user = casdoorAuthService.parseJwtToken(token);
             LOGGER.info("user：" + user.toString());
+            // asdoorUser(owner=built-in, name=admin, createdTii
+            /**
+             * asdoorUser(owner=built-in, name=admin, createdTii
+             * me=2022-04-27T08:17:21Z, updatedTime=, id=712ed058-a37f-4113-92b2-62549c12289c,
+             * type=normal-user, password=, displayName=Admin,
+             * avatar=https://www.7otech.com/pelican.svg, permanentAvatar=,
+             * email=admin@example.com, phone=12345678910, location=, address=[],
+             * affiliation=Example Inc., title=, homepage=, bio=, tag=staff, region=,
+             * language=, score=2000, ranking=1, isOnline=false, isAdmin=false,
+             * isGlobalAdmin=false, isForbidden=false, signupApplication=built-in-app,
+             * hash=, preHash=, github=, google=, qq=, wechat=, facebook=, dingtalk=,
+             * weibo=, gitee=, linkedin=, wecom=, lark=, gitlab=, ldap=, properties={})
+             */
             // create user
             // update user
         } catch (CasdoorAuthException e) {

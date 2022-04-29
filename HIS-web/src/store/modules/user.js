@@ -1,4 +1,4 @@
-import { login, logout, getInfo } from '@/api/user'
+import { login, ssologin, logout, getInfo } from '@/api/user'
 import { getToken, setToken, removeToken } from '@/utils/auth'
 import router, { resetRouter } from '@/router'
 
@@ -61,10 +61,10 @@ const actions = {
   },
 
   // sso登录
-  ssologin({ commit }, userInfo) {
-    const { username, password } = userInfo
+  ssologin({ commit }, codeInfo) {
+    const { code, state } = codeInfo
     return new Promise((resolve, reject) => {
-      login({ username: username.trim(), password: password }).then(response => {
+      ssologin({ code: code.trim(), state: state }).then(response => {
         const { data } = response
         commit('SET_TOKEN', data.tokenHead + data.token)
         setToken(data.tokenHead + data.token)

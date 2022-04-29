@@ -50,7 +50,7 @@ const config = {
   clientId: 'a07d0ddd8eaee128d94c',
   organizationName: 'built-in',
   appName: 'application_his',
-  // redirectPath: 'https://his.7otech.com/prod-api/callback'
+  // redirectPath: 'https://his.7otech.com/callback'
   redirectPath: 'https://his.7otech.com/callback'
 }
 Vue.use(VueCompositionAPI)

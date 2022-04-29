@@ -23,7 +23,11 @@ export default {
   methods: {
     pelicanHandleClick(thirdpart) {
       this.$store.commit('SET_AUTH_TYPE', thirdpart)
-      const url = this.getSigninUrl()
+      let url = this.getSigninUrl()
+      // https://pelican.7otech.com/login/oauth/authorize?client_id=a07d0ddd8eaee128d94c&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A1024https%3A%2F%2Fhis.7otech.com%2Fcallback&scope=read&state=application_his
+      // https://pelican.7otech.com/login/oauth/authorize?client_id=a07d0ddd8eaee128d94c&response_type=code&redirect_uri=https%3A%2F%2Fhis.7otech.com%2Fcallback&scope=read&state=application_his
+      url = url.replace('http%3A%2F%2Flocalhost%3A1024', '')
+      console.log(url)
       openWindow(url, thirdpart, 540, 540)
     },
     wechatHandleClick(thirdpart) {
