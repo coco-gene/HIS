@@ -6,6 +6,8 @@ import com.neu.his.api.controller.dms.DmsRedisSaveController;
 import com.neu.his.common.api.CommonPage;
 import com.neu.his.common.api.CommonResult;
 import com.neu.his.common.dto.sms.*;
+import com.neu.his.common.util.JwtTokenUtil;
+import com.neu.his.mbg.model.SmsStaff;
 import com.neu.his.sms.SmsSkdService;
 import com.neu.his.sms.SmsStaffService;
 import io.swagger.annotations.Api;
@@ -18,6 +20,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.CollectionUtils;
 import org.springframework.validation.BindingResult;
@@ -46,6 +52,12 @@ public class SsoLoginController {
     @Value("${jwt.tokenHead}")
     private String tokenHead;
 
+    @Autowired
+    private UserDetailsService userDetailsService;
+
+    @Autowired
+    private JwtTokenUtil jwtTokenUtil;
+
     /**
      * 统一登录
      * <p>author: Peter
@@ -54,11 +66,12 @@ public class SsoLoginController {
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult login(@RequestParam("code") String code, @RequestParam("state") String state) {
-        String token = "";
+        String token = null;
+        String casToken = "";
         CasdoorUser user = null;
         try {
-            token = casdoorAuthService.getOAuthToken(code, state);
-            user = casdoorAuthService.parseJwtToken(token);
+            casToken = casdoorAuthService.getOAuthToken(code, state);
+            user = casdoorAuthService.parseJwtToken(casToken);
             LOGGER.info("user：" + user.toString());
             // asdoorUser(owner=built-in, name=admin, createdTii
             /**
@@ -78,13 +91,21 @@ public class SsoLoginController {
             String avatar = user.getAvatar();
             String email = user.getEmail();
             String phone = user.getPhone();
-            // create user
-            // update user
+            SmsStaff smsStaff = smsStaffService.selectByUserName(name);
+            if(smsStaff == null) {// create user
+
+            } else {// update user
+
+            }
+
+            UserDetails userDetails = userDetailsService.loadUserByUsername(name);//返回的是一个userDetails的实现类AdminUserDetails
+            UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+            SecurityContextHolder.getContext().setAuthentication(authentication);  //在securityContext中添加该验证信息
+            token = jwtTokenUtil.generateToken(userDetails);
         } catch (CasdoorAuthException e) {
             e.printStackTrace();
         }
 
-        token = smsStaffService.login("演示用户", "test");
         if (token == null) {
             return CommonResult.validateFailed("用户名或密码错误");
         }
