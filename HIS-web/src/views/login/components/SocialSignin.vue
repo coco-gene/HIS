@@ -27,6 +27,7 @@ export default {
       // https://pelican.7otech.com/login/oauth/authorize?client_id=a07d0ddd8eaee128d94c&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A1024https%3A%2F%2Fhis.7otech.com%2Fcallback&scope=read&state=application_his
       // https://pelican.7otech.com/login/oauth/authorize?client_id=a07d0ddd8eaee128d94c&response_type=code&redirect_uri=https%3A%2F%2Fhis.7otech.com%2Fcallback&scope=read&state=application_his
       url = url.replace('http%3A%2F%2Flocalhost%3A1024', '')
+      url = url.replace('http%3A%2F%2Fhis.7otech.com', '')
       console.log(url)
       openWindow(url, thirdpart, 540, 540)
     },
