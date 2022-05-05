@@ -100,7 +100,7 @@ public class SsoLoginController {
                 smsStaffParam.setPassword("test");
                 smsStaffParam.setRoleId(7L);
                 smsStaffParam.setDeptId(1L);
-                smsStaffParam.setTitle("cas");
+                smsStaffParam.setTitle("cas:" + casToken);
                 smsStaffService.register(smsStaffParam);
             } else {// update user
                 smsStaffParam = new SmsStaffParam();
