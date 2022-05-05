@@ -98,7 +98,7 @@ public class SsoLoginController {
                 smsStaffParam.setUsername(name);
                 smsStaffParam.setName(displayName);
                 smsStaffParam.setPassword("test");
-                smsStaffParam.setRoleId(2L);
+                smsStaffParam.setRoleId(7L);
                 smsStaffParam.setDeptId(1L);
                 smsStaffParam.setTitle("cas");
                 smsStaffService.register(smsStaffParam);
