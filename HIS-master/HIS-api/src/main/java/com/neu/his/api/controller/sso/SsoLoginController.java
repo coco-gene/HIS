@@ -92,10 +92,20 @@ public class SsoLoginController {
             String email = user.getEmail();
             String phone = user.getPhone();
             SmsStaff smsStaff = smsStaffService.selectByUserName(name);
+            SmsStaffParam smsStaffParam;
             if(smsStaff == null) {// create user
-
+                smsStaffParam = new SmsStaffParam();
+                smsStaffParam.setUsername(name);
+                smsStaffParam.setName(displayName);
+                smsStaffParam.setPassword("test");
+                smsStaffParam.setRoleId(2L);
+                smsStaffParam.setDeptId(1L);
+                smsStaffParam.setTitle("cas");
+                smsStaffService.register(smsStaffParam);
             } else {// update user
-
+                smsStaffParam = new SmsStaffParam();
+                smsStaffParam.setName(displayName);
+                smsStaffService.update(smsStaff.getId(), smsStaffParam);
             }
 
             UserDetails userDetails = userDetailsService.loadUserByUsername(name);//返回的是一个userDetails的实现类AdminUserDetails
@@ -107,7 +117,7 @@ public class SsoLoginController {
         }
 
         if (token == null) {
-            return CommonResult.validateFailed("用户名或密码错误");
+            return CommonResult.validateFailed("统一登录错误");
         }
         //如果 token不等于 null
         Map<String, String> tokenMap = new HashMap<>();
